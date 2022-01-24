@@ -5,7 +5,7 @@ type OnOffPropsType = {
     onChange: (on: boolean) => void;
 }
 
-const OnOff: React.FC<OnOffPropsType> = (props) => {
+export const OnOff: React.FC<OnOffPropsType> = (props) => {
     console.log('on' + props.on);
 
     const onStyle = {
@@ -48,5 +48,3 @@ const OnOff: React.FC<OnOffPropsType> = (props) => {
         </div>
     );
 }
-
-export default OnOff;

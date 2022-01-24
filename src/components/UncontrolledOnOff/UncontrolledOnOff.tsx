@@ -3,10 +3,11 @@ import React, {useState} from "react";
 type OnOffPropsType = {
     //on: boolean;
     onChange: (on: boolean) => void;
+    defaultOn?: boolean;
 }
 
-const UncontrolledOnOff: React.FC<OnOffPropsType> = (props) => {
-    let [on, setOn] = useState(true);
+export const UncontrolledOnOff: React.FC<OnOffPropsType> = (props) => {
+    let [on, setOn] = useState(props.defaultOn ? props.defaultOn : false);
 
     const onStyle = {
         marginTop: "5px",
@@ -58,5 +59,3 @@ const UncontrolledOnOff: React.FC<OnOffPropsType> = (props) => {
         </div>
     );
 }
-
-export default UncontrolledOnOff;

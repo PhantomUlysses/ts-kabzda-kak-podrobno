@@ -5,8 +5,8 @@ type AccordionPropsType = {
     //collapsed: boolean;
 }
 
-function UncontrolledAccordion(props: AccordionPropsType) {
-    console.log("Accordion rendering");
+export function UncontrolledAccordion(props: AccordionPropsType) {
+    console.log("Accordion2 rendering");
 
     const [collapsed, setCollapsed] = useState(false);
 
@@ -17,7 +17,7 @@ function UncontrolledAccordion(props: AccordionPropsType) {
 }
 
 // function Accordion2(props: AccordionPropsType) {
-//     console.log("Accordion rendering");
+//     console.log("Accordion2 rendering");
 //     if (props.collapsed) {
 //         return (
 //             <div>
@@ -57,5 +57,3 @@ function AccordionBody() {
         </ul>
     );
 }
-
-export default UncontrolledAccordion;
