@@ -24,7 +24,7 @@ test('collapsed should be false', () => {
     expect(newState.collapsed).toBe(false);
 })
 
-test('reducer should should throw error because action type is incorrect', () => {
+test('reducer should throw error because action type is incorrect', () => {
     // data
     const state: StateType = {
         collapsed: false

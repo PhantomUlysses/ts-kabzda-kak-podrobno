@@ -19,6 +19,8 @@ export function UncontrolledAccordion(props: AccordionPropsType) {
     </div>
 }
 
+export const UncontrolledAccordionWithMemo = React.memo(UncontrolledAccordion);
+
 type AccordionTitlePropsType = {
     title: string;
     onClick: () => void;
