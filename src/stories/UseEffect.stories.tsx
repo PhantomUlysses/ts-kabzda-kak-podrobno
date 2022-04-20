@@ -33,7 +33,7 @@ export const SimpleExample = () => {
 }
 
 export const SetTimeoutExample = () => {
-    const [counter, setCounter] = useState(1);
+    const [counter, setCounter] = useState('00:00:00');
     const [fake, setFake] = useState(1);
 
     console.log("SetTimeoutExample");
@@ -41,8 +41,10 @@ export const SetTimeoutExample = () => {
     useEffect(() => {
 
         setInterval(() => {
-            console.log("tick: " + counter);
-            setCounter((state) => state + 1);
+            setCounter((state) => {
+                let date = new Date();
+                return date.toLocaleTimeString();
+            });
         }, 1000);
 
     }, []);
