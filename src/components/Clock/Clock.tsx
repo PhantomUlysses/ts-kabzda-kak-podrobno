@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {ClockPointer} from "./ClockPointer";
 
 type PropsType = {
 
@@ -14,7 +15,6 @@ export const Clock: React.FC<PropsType> = (props) => {
         }, 1000);
 
         return () => {
-            debugger;
             clearInterval(intervalID);
         }
     }, []);
@@ -27,5 +27,6 @@ export const Clock: React.FC<PropsType> = (props) => {
         <span>{get2DigitsString(date.getMinutes())}</span>
         :
         <span>{get2DigitsString(date.getSeconds())}</span>
+        {/*<ClockPointer />*/}
     </div>
 }
